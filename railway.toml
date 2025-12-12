@@ -1,5 +1,16 @@
+[service]
+name = "backend-laravel"
+
 [build]
-builder = "railpack"
+builder = "heroku/buildpacks:20"
 
 [variables]
-PHP_EXTENSIONS = "intl zip"
+
+[deploy]
+startCommand = "php artisan serve --host 0.0.0.0 --port ${PORT}"
+
+[php]
+extensions = [
+  "intl",
+  "zip"
+]
