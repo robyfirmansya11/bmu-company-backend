@@ -1,5 +1,0 @@
-[build]
-builder = "railpack"
-
-[variables]
-PHP_EXTENSIONS = "intl zip"
